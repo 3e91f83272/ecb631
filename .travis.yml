@@ -13,9 +13,9 @@ script:
 notifications:
   irc:
     channels:
-      - "irc.freenode.org##salathe"
+      - "irc.efnet.org#php.doc.travis"
     on_success: always
     on_failure: always
+    use_notice: true
     template:
-      - "%{repository} (%{branch}@%{commit} by %{author} %{compare_url}): %{message}"
-      - "Build #%{build_number} details: %{build_url}"
+      - "%{repository} - %{author}: %{message} - Travis details: %{build_url}"
