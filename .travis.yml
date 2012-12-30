@@ -1,3 +1,6 @@
+branches:
+  only:
+    - travis
 language: php
 php:
   - 5.4
@@ -8,7 +11,7 @@ before_script:
 script:
   - php doc-base/configure.php --enable-force-dom-save --enable-xml-details --disable-libxml-check --redirect-stderr-to-stdout --with-lang=en
 notifications:
-irc:
+  irc:
     channels:
       - "irc.freenode.org##salathe"
     on_success: always
@@ -16,4 +19,3 @@ irc:
     template:
       - "%{repository_url} (%{branch} %{commit} by %{author}): %{message}"
       - "Build #%{build_number} details: %{build_url}"
-
