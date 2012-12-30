@@ -17,5 +17,5 @@ notifications:
     on_success: always
     on_failure: always
     template:
-      - "%{repository_url} (%{branch} %{commit} by %{author}): %{message}"
+      - "%{repository} (%{branch}@%{commit} by %{author} %{compare_url}): %{message}"
       - "Build #%{build_number} details: %{build_url}"
