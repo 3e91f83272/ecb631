@@ -15,4 +15,4 @@ notifications:
     on_failure: always
     use_notice: true
     template:
-      - "%{repository} - %{author}: %{message} - Travis details: %{build_url}"
+      - "phpdoc/en %{message} - Travis details: %{build_url}"
