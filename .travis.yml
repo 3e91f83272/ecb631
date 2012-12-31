@@ -14,10 +14,10 @@ notifications:
     on_failure: always
     use_notice: true
     template:
-      - "Build %{build_number} phpdoc/en %{message} - Travis CI said: %{build_url}"
+      - "Build %{build_number} for phpdoc/en %{message} - Travis CI said: %{build_url}"
   webhooks:
     urls:
       - http://salathe-phpdoc-hubot.herokuapp.com/webhooks/travis-ci
     on_success: always
     on_failure: always
-    on_start: false
+    on_start: true
